@@ -1,10 +1,15 @@
 ## Objective
 To create an expenses tracker using React, incorporating react hooks, localstorage. 
 ## Progress 
-- Simple counter tracker can be intereacted with increase, decrease buttons
+- Expenses tracker now on main page with total
+- Costs hardcoded backend, displayed on page
+- Input boxes now added along with submit expense button
 
 ## Improvements
 - CSS
+- Items added and displayed
+- Prices added and displayed
+- Total to reflect ongoing expenses
 
 ## Collaborators
 mattybwoy

@@ -1,3 +1,14 @@
+## Objective
+To create an expenses tracker using React, incorporating react hooks, localstorage. 
+## Progress 
+- Simple counter tracker can be intereacted with increase, decrease buttons
+
+## Improvements
+- CSS
+
+## Collaborators
+mattybwoy
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

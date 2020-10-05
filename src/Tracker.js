@@ -29,6 +29,15 @@ return (
             }, 0)}
           </span>
         </p>
+      <label>
+        Enter Item: <input type='text'/>
+        <br></br>
+        <br></br>
+        Enter Cost: < input type = 'number' / >
+          <br></br>
+          <br></br>
+          <input type = 'submit' value = 'Add'/ >
+          </label>
       </div>
     </Jumbotron>
   </Container>

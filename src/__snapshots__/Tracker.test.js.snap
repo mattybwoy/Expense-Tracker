@@ -1,0 +1,59 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly when there are no expenses 1`] = `
+<div
+  className="text-center container"
+>
+  <div
+    className="jumbotron jumbotron-fluid"
+  >
+    <h2
+      className="display-6"
+    >
+      Expenses Tracker React App
+      <br />
+      <img
+        alt="react-logo"
+        src="logo.svg"
+        style={
+          Object {
+            "height": 50,
+            "width": 50,
+          }
+        }
+      />
+    </h2>
+    <div>
+      <p>
+        Total Expense: 
+        
+        <span
+          className="text success"
+        >
+          £
+          
+          15
+        </span>
+      </p>
+      <label>
+        Enter Item: 
+        <input
+          type="text"
+        />
+        <br />
+        <br />
+        Enter Cost: 
+        <input
+          type="number"
+        />
+        <br />
+        <br />
+        <input
+          type="submit"
+          value="Add"
+        />
+      </label>
+    </div>
+  </div>
+</div>
+`;

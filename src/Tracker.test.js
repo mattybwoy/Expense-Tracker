@@ -15,3 +15,15 @@ test('Displays title of app Expenses Tracker React App', () => {
   render(<App />)
   expect(screen.getByText("Expenses Tracker React App")).toBeInTheDocument
 })
+
+test('Adds an expense', () => {
+  render(<App />)
+    const textBox = screen.getByRole('textbox');
+    userEvent.type(textBox, 'Coffee')
+    const numberBox = screen.getByRole('button');
+    userEvent.type(numberBox, '2')
+    userEvent.click(screen.getByText('Add'))
+    const note = screen.getByText('Coffee');
+
+    expect(note).toBeInTheDocument();
+})

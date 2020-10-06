@@ -33,7 +33,7 @@ return (
         Enter Item: <input type='text'/>
         <br></br>
         <br></br>
-        Enter Cost: < input type = 'number' / >
+        Enter Cost: <input type = 'number'/>
           <br></br>
           <br></br>
           <input type = 'submit' value = 'Add'/ >

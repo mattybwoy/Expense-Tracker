@@ -11,6 +11,9 @@ To create an expenses tracker using React, incorporating react hooks, localstora
 - Prices added and displayed
 - Total to reflect ongoing expenses
 
+## Testing
+- 4 tests written, 3 passing
+
 ## Collaborators
 mattybwoy
 

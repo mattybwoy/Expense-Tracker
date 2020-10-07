@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { Jumbotron } from 'reactstrap'
 import logo from './logo.svg'
 import { Button, Container } from 'reactstrap'
+import Form from './components/Form'
 
 const EXPENSE = [
   {id: 1, name: "buy a book", amount: 10},
@@ -19,7 +20,7 @@ return (
       <br></br>
         <img src={logo} style={{ width: 50, height: 50 }} alt='react-logo' />
       </h2>
-      <div>
+      <div className= 'text-center'>
         <p>
           Total Expense: {''}
           <span className='text success'>
@@ -29,16 +30,19 @@ return (
             }, 0)}
           </span>
         </p>
-      <label>
-        Enter Item: <input type='text'/>
-        <br></br>
-        <br></br>
-        Enter Cost: <input type = 'number'/>
-          <br></br>
-          <br></br>
-          <input type = 'submit' value = 'Add'/ >
-          </label>
+      {
+        /* <label>
+                Enter Item: <input type='text'/>
+                <br></br>
+                <br></br>
+                Enter Cost: <input type = 'number'/>
+                  <br></br>
+                  <br></br>
+                  <input type = 'submit' value = 'Add'/ >
+                  </label> */
+      }  
       </div>
+      <Form / >
     </Jumbotron>
   </Container>
 )

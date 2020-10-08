@@ -3,19 +3,20 @@ import { Jumbotron } from 'reactstrap'
 import logo from './logo.svg'
 import { Button, Container } from 'reactstrap'
 import Form from './components/Form'
+import List from './List'
 
 const EXPENSE = [
-  {id: 1, name: "buy a book", amount: 10},
-  {id: 2, name: "buy cd", amount: 5}
+  {id: 1, name: "Buy a book", amount: 10},
+  {id: 2, name: "Buy CD", amount: 5}
 ]
 
 function Tracker() {
 const[expenses, setExpenses] = useState(EXPENSE)
 
 return (
-  <Container className='text-center'>
+  <Container>
     <Jumbotron fluid>
-      <h2 className= 'display-6'>
+      <h2 className= 'display-6' className = 'text-center'>
         Expenses Tracker React App
       <br></br>
         <img src={logo} style={{ width: 50, height: 50 }} alt='react-logo' />
@@ -42,7 +43,8 @@ return (
                   </label> */
       }  
       </div>
-      <Form / >
+      <Form />
+        <List expenses={expenses} />
     </Jumbotron>
   </Container>
 )

@@ -1,14 +1,16 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Jumbotron } from 'reactstrap'
 import logo from './logo.svg'
 import { Button, Container } from 'reactstrap'
 import Form from './components/Form'
 import List from './List'
 
-const EXPENSE = [
-  {id: 1, name: "Buy a book", amount: 10},
-  {id: 2, name: "Buy CD", amount: 5}
-]
+// const EXPENSE = [
+//   {id: 1, name: "Buy a book", amount: 10},
+//   {id: 2, name: "Buy CD", amount: 5}
+// ]
+
+const EXPENSE = localStorage.getItem('expenses') ? JSON.parse(localStorage.getItem('expenses')) : []
 
 function Tracker() {
   const [name, setName] = useState('')
@@ -37,8 +39,11 @@ function Tracker() {
     } else {
       console.log('Invalid expense or amount')
     }
-
   }
+
+  useEffect(() => {
+    localStorage.setItem('expenses', JSON.stringify(expenses))
+  }, [expenses])
 
 return (
   <Container>

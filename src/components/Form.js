@@ -25,7 +25,7 @@ const Form = ({name, amount, handleName, handleAmount, handleSubmitForm}) => (
     </FormGroup>
     <FormGroup className='row'>
       <Label for='exampleEmail' sm={2}>
-        Amount
+       Amount £
       </Label>
       <Col sm={4}>
         <Input
@@ -38,7 +38,7 @@ const Form = ({name, amount, handleName, handleAmount, handleSubmitForm}) => (
         />
       </Col>
     </FormGroup>
-    <Button type='submit' color='primary'>
+    <Button type='submit' color='primary' >
       Add
     </Button>
   </BTForm>

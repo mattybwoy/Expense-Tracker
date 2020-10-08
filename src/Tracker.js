@@ -26,7 +26,18 @@ function Tracker() {
   }
 
   const handleSubmitForm = event => {
-    event.preventDefault()
+    event.preventDefault();
+
+    if (name!== '' && amount > 0) {
+      const expense = { name, amount }
+      setExpenses([...expenses, expense])
+      console.log(expense)
+      setName('')
+      setAmount('')
+    } else {
+      console.log('Invalid expense or amount')
+    }
+
   }
 
 return (
@@ -61,10 +72,10 @@ return (
       </div>
       <Form 
       name={name}
-      amount= {amount}
+      amount={amount}
       handleName={handleName}
       handleAmount={handleAmount}
-      handeSubmitForm={handleSubmitForm}
+      handleSubmitForm={handleSubmitForm}
       />
         <List expenses={expenses} />
     </Jumbotron>

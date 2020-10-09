@@ -41,6 +41,10 @@ function Tracker() {
     }
   }
 
+  const handleClearExpenses = () => {
+    setExpenses([])
+  }
+
   useEffect(() => {
     localStorage.setItem('expenses', JSON.stringify(expenses))
   }, [expenses])
@@ -81,6 +85,7 @@ return (
       handleName={handleName}
       handleAmount={handleAmount}
       handleSubmitForm={handleSubmitForm}
+      handleClearExpenses={handleClearExpenses}
       />
         <List expenses={expenses} />
     </Jumbotron>

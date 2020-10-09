@@ -13,6 +13,8 @@ To create an expenses tracker using React, incorporating react hooks, localstora
 - Editing existing expenses
 - individual id's for each expense
 - More testing
+- Edgecases (ie negative amount)
+- Error notifications for invalid expenses
 
 ## Testing
 - 4 tests written, 3 passing

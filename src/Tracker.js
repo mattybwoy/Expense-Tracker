@@ -5,11 +5,6 @@ import { Button, Container } from 'reactstrap'
 import Form from './components/Form'
 import List from './List'
 
-// const EXPENSE = [
-//   {id: 1, name: "Buy a book", amount: 10},
-//   {id: 2, name: "Buy CD", amount: 5}
-// ]
-
 const EXPENSE = localStorage.getItem('expenses') ? JSON.parse(localStorage.getItem('expenses')) : []
 
 function Tracker() {
@@ -67,17 +62,7 @@ return (
             }, 0)}
           </span>
         </p>
-      {
-        /* <label>
-                Enter Item: <input type='text'/>
-                <br></br>
-                <br></br>
-                Enter Cost: <input type = 'number'/>
-                  <br></br>
-                  <br></br>
-                  <input type = 'submit' value = 'Add'/ >
-                  </label> */
-      }  
+ 
       </div>
       <Form 
       name={name}

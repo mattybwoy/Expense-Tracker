@@ -54,11 +54,11 @@ return (
       </h2>
       <div className= 'text-center'>
         <p>
-          Total Expense: {''}
+          Total Expenditure: {''}
           <span className='text success'>
             £{''}
             {expenses.reduce((accumulator, currentValue) => {
-              return (accumulator += parseInt(currentValue.amount))
+              return (accumulator += parseFloat(currentValue.amount))
             }, 0)}
           </span>
         </p>

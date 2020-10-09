@@ -4,12 +4,15 @@ To create an expenses tracker using React, incorporating react hooks, localstora
 - Expenses tracker now on main page with total
 - Costs hardcoded backend, displayed on page
 - Input boxes now added along with submit expense button
+- Reset button added which clears out all expenses
+- Local storage records previous expenses after page refresh
 
 ## Improvements
 - CSS
-- Items added and displayed
-- Prices added and displayed
-- Total to reflect ongoing expenses
+- Individual deletion of expenses
+- Editing existing expenses
+- individual id's for each expense
+- More testing
 
 ## Testing
 - 4 tests written, 3 passing

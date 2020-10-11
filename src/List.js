@@ -1,5 +1,5 @@
 import React from 'react'
-import { ListGroup, ListGroupItem } from 'reactstrap'
+import { Button, ListGroup, ListGroupItem } from 'reactstrap'
 
 const List = ({ expenses }) => (
   <div>
@@ -7,6 +7,7 @@ const List = ({ expenses }) => (
       {expenses.map(item => (
         <ListGroupItem key={item.id}>
           {item.name} - £{item.amount}
+            <Button variant="contained" style={{float: 'right'}} className="float-right">Delete</Button>
         </ListGroupItem>
       ))}
     </ListGroup>

@@ -6,6 +6,7 @@ To create an expenses tracker using React, incorporating react hooks, localstora
 - Input boxes now added along with submit expense button
 - Reset button added which clears out all expenses
 - Local storage records previous expenses after page refresh
+- Reset button added to remove expenses
 
 ## Improvements
 - CSS

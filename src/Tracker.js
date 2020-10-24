@@ -39,7 +39,7 @@ function Tracker() {
       setName('')
       setAmount('')
     } else {
-      console.log('Invalid expense or amount')
+      alert('Invalid expense or amount')
     }
   }
 

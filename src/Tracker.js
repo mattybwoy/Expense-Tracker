@@ -1,9 +1,16 @@
 import React, { useState, useEffect } from 'react'
 import { Jumbotron } from 'reactstrap'
 import logo from './logo.svg'
-import { Button, Container } from 'reactstrap'
-import Form from './components/Form'
+//import { Button, Container } from 'reactstrap'
+//import Form from './components/Form'
 import List from './List'
+import { Form as BTForm,
+FormGroup,
+Input,
+Label,
+Col,
+Button,
+Container } from 'reactstrap'
 
 const EXPENSE = localStorage.getItem('expenses') ? JSON.parse(localStorage.getItem('expenses')) : []
 
@@ -64,14 +71,42 @@ return (
         </p>
  
       </div>
-      <Form 
-      name={name}
-      amount={amount}
-      handleName={handleName}
-      handleAmount={handleAmount}
-      handleSubmitForm={handleSubmitForm}
-      handleClearExpenses={handleClearExpenses}
-      />
+      <BTForm style={{ margin: 10 }} onSubmit={handleSubmitForm}>
+      <FormGroup className='row'>
+      <Label for='exampleEmail' sm={2}>
+        Name of Expense
+      </Label>
+      <Col sm={4}>
+        <Input
+          type='text'
+          name='name'
+          id='expenseName'
+          placeholder='Expense'
+          value={name}
+          onChange={handleName}
+        />
+      </Col>
+    </FormGroup>
+    <FormGroup className='row'>
+      <Label for='exampleEmail' sm={2}>
+       Amount £
+      </Label>
+      <Col sm={4}>
+        <Input
+          type='number'
+          name='amount'
+          id='expenseAmount'
+          placeholder='0.00'
+          value={amount}
+          onChange={handleAmount}
+        />
+      </Col>
+    </FormGroup>
+    <Button type='submit' color='primary' >
+      Add
+    </Button>{' '}
+    <Button type='submit' color ='danger' onClick={handleClearExpenses}>Reset</Button>
+  </BTForm>
         <List expenses={expenses} />
     </Jumbotron>
   </Container>

@@ -20,8 +20,8 @@ test('Adds an expense', () => {
   render(<App />)
     const textBox = screen.getByRole('textbox');
     userEvent.type(textBox, 'Coffee')
-    const numberBox = screen.getByRole('button');
-    userEvent.type(numberBox, '2')
+    const numberBox = screen.getByText('Amount £');
+    userEvent.click(numberBox, '2')
     userEvent.click(screen.getByText('Add'))
     const note = screen.getByText('Coffee');
 

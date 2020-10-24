@@ -35,7 +35,6 @@ function Tracker() {
     if (name!== '' && amount > 0) {
       const expense = { name, amount }
       setExpenses([...expenses, expense])
-      console.log(expense)
       setName('')
       setAmount('')
     } else {
@@ -71,7 +70,7 @@ return (
         </p>
  
       </div>
-      <BTForm style={{ margin: 10 }} onSubmit={handleSubmitForm}>
+      <BTForm style={{ margin: 10 }}>
       <FormGroup className='row'>
       <Label for='exampleEmail' sm={2}>
         Name of Expense
@@ -102,7 +101,7 @@ return (
         />
       </Col>
     </FormGroup>
-    <Button type='submit' color='primary' >
+    <Button type='submit' color='primary' onClick={handleSubmitForm}>
       Add
     </Button>{' '}
     <Button type='submit' color ='danger' onClick={handleClearExpenses}>Reset</Button>

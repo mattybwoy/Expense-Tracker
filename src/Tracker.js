@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { Jumbotron } from 'reactstrap'
 import logo from './logo.svg'
+import './Tracker.css';
 //import { Button, Container } from 'reactstrap'
 //import Form from './components/Form'
 import List from './List'
@@ -17,6 +18,7 @@ const EXPENSE = localStorage.getItem('expenses') ? JSON.parse(localStorage.getIt
 function Tracker() {
   const [name, setName] = useState('')
   const [amount, setAmount] = useState('')
+  const [key, setKey] = useState('')
   const[expenses, setExpenses] = useState(EXPENSE)
 
   const handleName = event => {
@@ -27,13 +29,15 @@ function Tracker() {
   const handleAmount = event => {
     console.log('Amount ', event.target.value)
     setAmount(event.target.value)
+    console.log(key)
+    setKey(Date.now())
   }
 
   const handleSubmitForm = event => {
     event.preventDefault();
 
     if (name!== '' && amount > 0) {
-      const expense = { name, amount }
+      const expense = { name, amount, key }
       setExpenses([...expenses, expense])
       setName('')
       setAmount('')
@@ -46,10 +50,18 @@ function Tracker() {
     setExpenses([])
   }
 
+
+  const handleDelete = key => {
+    const filteredExpense = expenses.filter(expense => expense.key!==key);
+    setExpenses(
+   filteredExpense
+  )
+  }
+
   useEffect(() => {
     localStorage.setItem('expenses', JSON.stringify(expenses))
   }, [expenses])
-
+  
 return (
   <Container>
     <Jumbotron fluid>
@@ -106,7 +118,7 @@ return (
     </Button>{' '}
     <Button type='submit' color ='danger' onClick={handleClearExpenses}>Reset</Button>
   </BTForm>
-        <List expenses={expenses} />
+        <List expenses={expenses} handleDelete={handleDelete}/>
     </Jumbotron>
   </Container>
 )

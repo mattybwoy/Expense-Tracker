@@ -66,7 +66,7 @@ return (
   <Container>
     <Jumbotron fluid>
       <h2 className= 'display-6' className = 'text-center'>
-        Expenses Tracker React App
+        Expenses Tracker
       <br></br>
       </h2>
       <div className= 'text-center'>
@@ -81,9 +81,9 @@ return (
         </p>
  
       </div>
-      <BTForm style={{ margin: 10 }}>
+      <BTForm style={{ margin: 10, textAlign: "center" }}>
       <FormGroup className='row'>
-      <Label for='exampleEmail' sm={2}>
+      <Label for='exampleEmail' sm={4}>
         Name of Expense
       </Label>
       <Col sm={4}>
@@ -98,7 +98,7 @@ return (
       </Col>
     </FormGroup>
     <FormGroup className='row'>
-      <Label for='exampleEmail' sm={2}>
+      <Label for='exampleEmail' sm={4}>
        Amount £
       </Label>
       <Col sm={4}>
@@ -112,7 +112,7 @@ return (
         />
       </Col>
     </FormGroup>
-    <Button type='submit' color='primary' onClick={handleSubmitForm}>
+    <Button className = "add" type='submit' color='primary' onClick={handleSubmitForm}>
       Add
     </Button>{' '}
     <Button type='submit' color ='danger' onClick={handleClearExpenses}>Reset</Button>
@@ -120,7 +120,7 @@ return (
         <List expenses={expenses} handleDelete={handleDelete}/>
     </Jumbotron>
         <footer><strong>A MATTYBWOY CREATION</strong><br/>Powered by React<br></br>
-      <img src = {logo} alt="https://reactjs.org/" width= "30"></img>
+      <img src = {logo} alt="https://reactjs.org/" width= "40"></img>
       </footer>
   </Container>
 )

@@ -4,8 +4,9 @@
   background-color: rgba(128, 128, 128, 0.089);
 }
 
-.body {
-  background-color: rgba(128, 128, 128, 0.089);
+body {
+  padding: 50px;
+  border-radius: 10px;
 }
 
 footer {
@@ -21,7 +22,6 @@ footer {
   right: 0;
 }
 
-
-
-
-
+Label {
+  text-align: right;
+}

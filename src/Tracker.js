@@ -64,7 +64,7 @@ function Tracker() {
 
 return (
   <Container>
-    <Jumbotron >
+    <Jumbotron style = {{backgroundColor: "#bdbdbd "}}>
       <h2 className= 'display-6' className = 'text-center'>
         Expenses Tracker
       <br></br>

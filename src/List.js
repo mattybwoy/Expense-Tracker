@@ -6,7 +6,7 @@ const List = ({ expenses, handleDelete }) => (
   <div>
     <ListGroup>
       {expenses.map(expense => (
-        <ListGroupItem key={expense.key}>
+        <ListGroupItem style={{backgroundColor: "muted"}}key={expense.key}>
           {expense.name} - £{expense.amount}
             <Button variant="contained" style={{float: 'right'}} 
             className="float-right" 

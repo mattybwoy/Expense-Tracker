@@ -64,7 +64,7 @@ function Tracker() {
 
 return (
   <Container>
-    <Jumbotron fluid>
+    <Jumbotron >
       <h2 className= 'display-6' className = 'text-center'>
         Expenses Tracker
       <br></br>

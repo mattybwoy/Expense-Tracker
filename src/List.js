@@ -4,7 +4,6 @@ import { Button, ListGroup, ListGroupItem } from 'reactstrap'
 const List = ({ expenses, handleDelete }) => (
 
   <div>
-    {console.log(handleDelete)}
     <ListGroup>
       {expenses.map(expense => (
         <ListGroupItem key={expense.key}>

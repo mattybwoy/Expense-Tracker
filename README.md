@@ -8,12 +8,12 @@ To create an expenses tracker using React, incorporating react hooks, localstora
 - Local storage records previous expenses after page refresh
 - Reset button added to remove expenses
 - Alert added for invalid expenses
+- Delete individual expenses
 
 ## Improvements
 - CSS
-- Individual deletion of expenses
+- Animation
 - Editing existing expenses
-- individual id's for each expense
 - More testing
 
 

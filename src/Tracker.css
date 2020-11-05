@@ -1,9 +1,24 @@
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+
 .Tracker {
   background-color: rgba(128, 128, 128, 0.089);
 }
 
 .body {
   background-color: rgba(128, 128, 128, 0.089);
+}
+
+footer {
+  font-size: 10px;
+  font-family: 'Press Start 2P', cursive;
+  background-color: #777;
+  padding: 10px;
+  text-align: center;
+  color: white;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 
 

@@ -61,14 +61,13 @@ function Tracker() {
   useEffect(() => {
     localStorage.setItem('expenses', JSON.stringify(expenses))
   }, [expenses])
-  
+
 return (
   <Container>
     <Jumbotron fluid>
       <h2 className= 'display-6' className = 'text-center'>
         Expenses Tracker React App
       <br></br>
-        <img src={logo} style={{ width: 50, height: 50 }} alt='react-logo' />
       </h2>
       <div className= 'text-center'>
         <p>
@@ -120,6 +119,9 @@ return (
   </BTForm>
         <List expenses={expenses} handleDelete={handleDelete}/>
     </Jumbotron>
+        <footer><strong>A MATTYBWOY CREATION</strong><br/>Powered by React<br></br>
+      <img src = {logo} alt="https://reactjs.org/" width= "30"></img>
+      </footer>
   </Container>
 )
 }

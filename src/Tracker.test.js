@@ -13,7 +13,7 @@ test('renders correctly when there are no expenses', () => {
 
 test('Displays title of app Expenses Tracker React App', () => {
   render(<App />)
-  expect(screen.getByText("Expenses Tracker React App")).toBeInTheDocument
+  expect(screen.getByText("Expenses Tracker")).toBeInTheDocument
 })
 
 test('Adds an expense', () => {
@@ -26,4 +26,9 @@ test('Adds an expense', () => {
     const note = screen.getByText('Coffee');
 
     expect(note).toBeInTheDocument();
+})
+
+test('Allows expense to be deleted', () => {
+  render(<App />)
+
 })

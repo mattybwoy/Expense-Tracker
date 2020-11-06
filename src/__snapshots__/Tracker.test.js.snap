@@ -5,23 +5,18 @@ exports[`renders correctly when there are no expenses 1`] = `
   className="container"
 >
   <div
-    className="jumbotron jumbotron-fluid"
+    className="jumbotron"
+    style={
+      Object {
+        "backgroundColor": "#bdbdbd ",
+      }
+    }
   >
     <h2
       className="text-center"
     >
-      Expenses Tracker React App
+      Expenses Tracker
       <br />
-      <img
-        alt="react-logo"
-        src="logo.svg"
-        style={
-          Object {
-            "height": 50,
-            "width": 50,
-          }
-        }
-      />
     </h2>
     <div
       className="text-center"
@@ -40,10 +35,10 @@ exports[`renders correctly when there are no expenses 1`] = `
     </div>
     <form
       className=""
-      onSubmit={[Function]}
       style={
         Object {
           "margin": 10,
+          "textAlign": "center",
         }
       }
     >
@@ -51,7 +46,7 @@ exports[`renders correctly when there are no expenses 1`] = `
         className="row form-group"
       >
         <label
-          className="col-sm-2 col-form-label"
+          className="col-sm-4 col-form-label"
           htmlFor="exampleEmail"
         >
           Name of Expense
@@ -74,7 +69,7 @@ exports[`renders correctly when there are no expenses 1`] = `
         className="row form-group"
       >
         <label
-          className="col-sm-2 col-form-label"
+          className="col-sm-4 col-form-label"
           htmlFor="exampleEmail"
         >
           Amount £
@@ -95,7 +90,7 @@ exports[`renders correctly when there are no expenses 1`] = `
       </div>
       <button
         aria-label={null}
-        className="btn btn-primary"
+        className="add btn btn-primary"
         onClick={[Function]}
         type="submit"
       >
@@ -117,5 +112,18 @@ exports[`renders correctly when there are no expenses 1`] = `
       />
     </div>
   </div>
+  <footer>
+    <strong>
+      A MATTYBWOY CREATION
+    </strong>
+    <br />
+    Powered by React
+    <br />
+    <img
+      alt="https://reactjs.org/"
+      src="logo.svg"
+      width="40"
+    />
+  </footer>
 </div>
 `;

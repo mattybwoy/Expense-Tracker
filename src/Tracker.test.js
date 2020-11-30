@@ -40,7 +40,3 @@ test('Reset all expenses', () => {
     expect(screen.getByText("£0")).toBeInTheDocument;
 })
 
-test('Allows expense to be deleted', () => {
-  render(<App />)
-
-})

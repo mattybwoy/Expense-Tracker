@@ -29,7 +29,6 @@ function Tracker() {
   const handleAmount = event => {
     console.log('Amount ', event.target.value)
     setAmount(event.target.value)
-    console.log(key)
     setKey(Date.now())
   }
 

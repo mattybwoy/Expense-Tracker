@@ -28,6 +28,18 @@ test('Adds an expense', () => {
     expect(note).toBeInTheDocument();
 })
 
+test('Reset all expenses', () => {
+    render(<App />)
+    const textBox = screen.getByRole('textbox');
+    userEvent.type(textBox, 'Coffee')
+    const numberBox = screen.getByRole('spinbutton');
+    userEvent.click(numberBox, 2)
+    userEvent.click(screen.getByText('Add'))
+    userEvent.click(screen.getByText('Reset'))
+
+    expect(screen.getByText("£0")).toBeInTheDocument;
+})
+
 test('Allows expense to be deleted', () => {
   render(<App />)
 

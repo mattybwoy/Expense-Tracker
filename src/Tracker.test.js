@@ -20,10 +20,10 @@ test('Adds an expense', () => {
   render(<App />)
     const textBox = screen.getByRole('textbox');
     userEvent.type(textBox, 'Coffee')
-    const numberBox = screen.getByText('Amount £');
-    userEvent.click(numberBox, '2')
+    const numberBox = screen.getByRole('spinbutton');
+    userEvent.click(numberBox, 2)
     userEvent.click(screen.getByText('Add'))
-    const note = screen.getByText('Coffee');
+    const note = screen.getByDisplayValue('Coffee');
 
     expect(note).toBeInTheDocument();
 })

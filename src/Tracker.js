@@ -64,7 +64,7 @@ function Tracker() {
 return (
   <Container>
     <Jumbotron style = {{backgroundColor: "#bdbdbd "}}>
-      <h2 className= 'display-6' className = 'text-center'>
+      <h2 className = 'text-center'>
         Expenses Tracker
       <br></br>
       </h2>
@@ -82,7 +82,7 @@ return (
       </div>
       <BTForm style={{ margin: 10, textAlign: "center" }}>
       <FormGroup className='row'>
-      <Label for='exampleEmail' sm={4}>
+      <Label for='exampleEmail' sm={4} >
         Name of Expense
       </Label>
       <Col sm={4}>
@@ -96,7 +96,7 @@ return (
         />
       </Col>
     </FormGroup>
-    <FormGroup className='row'>
+    <FormGroup className='row' >
       <Label for='exampleEmail' sm={4}>
        Amount £
       </Label>
@@ -114,7 +114,7 @@ return (
     <Button className = "add" type='submit' color='primary' onClick={handleSubmitForm}>
       Add
     </Button>{' '}
-    <Button type='submit' color ='danger' onClick={handleClearExpenses}>Reset</Button>
+    <Button className = "reset" type='submit' color ='danger' onClick={handleClearExpenses}>Reset</Button>
   </BTForm>
         <List expenses={expenses} handleDelete={handleDelete}/>
     </Jumbotron>

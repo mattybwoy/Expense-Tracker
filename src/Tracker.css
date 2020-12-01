@@ -1,7 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
 
+@import url('https://fonts.googleapis.com/css2?family=Castoro&family=Electrolize&family=Noto+Serif+JP:wght@700&display=swap');
+
 .Tracker {
   background-color: rgba(128, 128, 128, 0.089);
+}
+
+.text-center {
+font-family: 'Castoro', serif;
 }
 
 body {
@@ -25,3 +31,8 @@ footer {
 Label {
   text-align: right;
 }
+
+.add {
+  margin-right: 100px;
+}
+

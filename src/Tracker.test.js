@@ -12,7 +12,7 @@ test('renders correctly when there are no expenses', () => {
 });
 
 test('Displays title of app Expenses Tracker React App', () => {
-  render(<App />)
+  render(<Tracker />)
   expect(screen.getByText("Expenses Tracker")).toBeInTheDocument
 })
 

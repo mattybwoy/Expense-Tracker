@@ -116,7 +116,7 @@ return (
     </Button>{' '}
     <Button className = "reset" type='submit' color ='danger' onClick={handleClearExpenses}>Reset</Button>
   </BTForm>
-        <List expenses={expenses} handleDelete={handleDelete}/>
+        <List expenses={expenses} handleDelete={handleDelete}/>Delete
     </Jumbotron>
         <footer><strong>A MATTYBWOY CREATION</strong><br/>Powered by React<br></br>
       <img src = {logo} alt="https://reactjs.org/" width= "40"></img>

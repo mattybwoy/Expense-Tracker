@@ -99,7 +99,7 @@ exports[`renders correctly when there are no expenses 1`] = `
        
       <button
         aria-label={null}
-        className="btn btn-danger"
+        className="reset btn btn-danger"
         onClick={[Function]}
         type="submit"
       >
@@ -111,6 +111,7 @@ exports[`renders correctly when there are no expenses 1`] = `
         className="list-group"
       />
     </div>
+    Delete
   </div>
   <footer>
     <strong>

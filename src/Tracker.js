@@ -2,9 +2,8 @@ import React, { useState, useEffect } from 'react'
 import { Jumbotron } from 'reactstrap'
 import logo from './logo.svg'
 import './Tracker.css';
-//import { Button, Container } from 'reactstrap'
 import Form from './components/Form'
-import List from './List'
+import List from './components/List'
 import { Container } from 'reactstrap'
 
 const EXPENSE = localStorage.getItem('expenses') ? JSON.parse(localStorage.getItem('expenses')) : []

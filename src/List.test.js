@@ -5,7 +5,7 @@ import userEvent from '@testing-library/user-event'
 //import renderer from 'react-test-renderer';
 import App from './App';
 
-import List from '../src/List'
+import List from './components/List'
 
 
 xtest('Allows expense to be deleted', () => {

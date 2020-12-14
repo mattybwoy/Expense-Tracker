@@ -1,10 +1,12 @@
+import './Form.css'
 import React from 'react'
 import { Form as BTForm,
 FormGroup,
 Input,
 Label,
 Col,
-Button } from 'reactstrap'
+Button,
+} from 'reactstrap'
 
 const Form = ({name, amount, handleName, handleAmount, handleSubmitForm, handleClearExpenses}) => (
   <BTForm style={{ margin: 10, textAlign: "center" }}>

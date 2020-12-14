@@ -99,7 +99,7 @@ exports[`renders correctly when there are no expenses 1`] = `
        
       <button
         aria-label={null}
-        className="reset btn btn-danger"
+        className="btn btn-danger"
         onClick={[Function]}
         type="submit"
       >

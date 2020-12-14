@@ -3,15 +3,9 @@ import { Jumbotron } from 'reactstrap'
 import logo from './logo.svg'
 import './Tracker.css';
 //import { Button, Container } from 'reactstrap'
-//import Form from './components/Form'
+import Form from './components/Form'
 import List from './List'
-import { Form as BTForm,
-FormGroup,
-Input,
-Label,
-Col,
-Button,
-Container } from 'reactstrap'
+import { Container } from 'reactstrap'
 
 const EXPENSE = localStorage.getItem('expenses') ? JSON.parse(localStorage.getItem('expenses')) : []
 
@@ -81,42 +75,7 @@ return (
         </p>
  
       </div>
-      <BTForm style={{ margin: 10, textAlign: "center" }}>
-      <FormGroup className='row'>
-      <Label for='exampleEmail' sm={4} >
-        Name of Expense
-      </Label>
-      <Col sm={4}>
-        <Input
-          type='text'
-          name='name'
-          id='expenseName'
-          placeholder='Expense'
-          value={name}
-          onChange={handleName}
-        />
-      </Col>
-    </FormGroup>
-    <FormGroup className='row' >
-      <Label for='exampleEmail' sm={4}>
-       Amount £
-      </Label>
-      <Col sm={4}>
-        <Input
-          type='number'
-          name='amount'
-          id='expenseAmount'
-          placeholder='0.00'
-          value={amount}
-          onChange={handleAmount}
-        />
-      </Col>
-    </FormGroup>
-    <Button className = "add" type='submit' color='primary' onClick={handleSubmitForm}>
-      Add
-    </Button>{' '}
-    <Button className = "reset" type='submit' color ='danger' onClick={handleClearExpenses}>Reset</Button>
-  </BTForm>
+        <Form name = {name} amount = {amount} handleName = {handleName} handleAmount = {handleAmount} handleSubmitForm = {handleSubmitForm} handleClearExpenses = {handleClearExpenses}/>
         <List expenses={expenses} handleDelete={handleDelete}/>Delete
     </Jumbotron>
         <footer><strong>A MATTYBWOY CREATION</strong><br/>Powered by React<br></br>

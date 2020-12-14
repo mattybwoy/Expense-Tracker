@@ -9,18 +9,19 @@ To create an expenses tracker using React, incorporating react hooks, localstora
 - Reset button added to remove expenses
 - Alert added for invalid expenses
 - Delete individual expenses
+- Amounts entered now 2 decimal places
 
 ## Improvements
 - Animation
 - Editing existing expenses
-- Component testing for list and form
+- Component testing
 - File structure organisation
-- Remove Delete in Tracker
-- Edgecases for amounts entered
 
 
 ## Testing (Jest)
-- 5 tests passing
+- 4 pass
+- 1 fail
+- 1 pending
 
 ## Collaborators
 mattybwoy

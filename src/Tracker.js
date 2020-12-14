@@ -10,7 +10,7 @@ const EXPENSE = localStorage.getItem('expenses') ? JSON.parse(localStorage.getIt
 
 function Tracker() {
   const [name, setName] = useState('')
-  const [amount, setAmount] = useState('')
+  let [amount, setAmount] = useState('')
   const [key, setKey] = useState('')
   const[expenses, setExpenses] = useState(EXPENSE)
 
@@ -21,7 +21,8 @@ function Tracker() {
 
   const handleAmount = event => {
     console.log('Amount: ', event.target.value)
-    setAmount(event.target.value)
+    
+    setAmount(event.target.value);
     setKey(Date.now())
   }
 
@@ -29,6 +30,7 @@ function Tracker() {
     event.preventDefault();
 
     if (name!== '' && amount > 0) {
+      amount = parseFloat(amount).toFixed(2);
       const expense = { name, amount, key }
       setExpenses([...expenses, expense])
       setName('')
@@ -75,7 +77,7 @@ return (
  
       </div>
         <Form name = {name} amount = {amount} handleName = {handleName} handleAmount = {handleAmount} handleSubmitForm = {handleSubmitForm} handleClearExpenses = {handleClearExpenses}/>
-        <List expenses={expenses} handleDelete={handleDelete}/>Delete
+        <List expenses={expenses} handleDelete={handleDelete}/>
     </Jumbotron>
         <footer><strong>A MATTYBWOY CREATION</strong><br/>Powered by React<br></br>
       <img src = {logo} alt="https://reactjs.org/" width= "40"></img>

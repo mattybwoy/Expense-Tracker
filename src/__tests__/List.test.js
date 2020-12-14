@@ -11,7 +11,7 @@ xtest('Allows expense to be deleted', () => {
   render(<List/>)
   const expenses = [{name: "Book", amount: "5", key: 1607957294201}]
 
-  const textBox = screen.getByRole('textbox');
+    const textBox = screen.getByRole('textbox');
     userEvent.type(textBox, 'Book')
     const numberBox = screen.getByRole('spinbutton');
     userEvent.click(numberBox, 5)

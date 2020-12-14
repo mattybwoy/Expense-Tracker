@@ -14,7 +14,6 @@ To create an expenses tracker using React, incorporating react hooks, localstora
 - Animation
 - Editing existing expenses
 - Component testing for list and form
-- Feature testing in app.js
 - File structure organisation
 - Remove Delete in Tracker
 

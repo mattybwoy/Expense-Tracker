@@ -7,9 +7,9 @@ Col,
 Button } from 'reactstrap'
 
 const Form = ({name, amount, handleName, handleAmount, handleSubmitForm, handleClearExpenses}) => (
-  <BTForm style={{ margin: 10 }} onSubmit={handleSubmitForm}>
+  <BTForm style={{ margin: 10, textAlign: "center" }}>
       <FormGroup className='row'>
-      <Label for='exampleEmail' sm={2}>
+      <Label for='exampleEmail' sm={4}>
         Name of Expense
       </Label>
       <Col sm={4}>
@@ -24,7 +24,7 @@ const Form = ({name, amount, handleName, handleAmount, handleSubmitForm, handleC
       </Col>
     </FormGroup>
     <FormGroup className='row'>
-      <Label for='exampleEmail' sm={2}>
+      <Label for='exampleEmail' sm={4}>
        Amount £
       </Label>
       <Col sm={4}>
@@ -38,7 +38,7 @@ const Form = ({name, amount, handleName, handleAmount, handleSubmitForm, handleC
         />
       </Col>
     </FormGroup>
-    <Button type='submit' color='primary' >
+    <Button className = 'add' type='submit' color='primary' onClick={handleSubmitForm}>
       Add
     </Button>{' '}
     <Button type='submit' color ='danger' onClick={handleClearExpenses}>Reset</Button>

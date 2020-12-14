@@ -1,10 +1,25 @@
 import React from 'react';
-import { render } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import App from './App';
 import renderer from 'react-test-renderer';
+import userEvent from '@testing-library/user-event'
 
 
 test('renders correctly when there are no expenses', () => {
-  const tree = renderer.create( < App / > ).toJSON();
+  const tree = renderer.create( <App /> ).toJSON();
   expect(tree).toMatchSnapshot();
 });
+
+test('Allows expense to be deleted', () => {
+  render(<App />)
+
+  const textBox = screen.getByRole('textbox');
+    userEvent.type(textBox, 'Book')
+    const numberBox = screen.getByRole('spinbutton');
+    userEvent.click(numberBox, 5)
+    userEvent.click(screen.getByText('Add'))
+    const note = screen.getByDisplayValue('Book');
+    userEvent.click(screen.getByText('Delete'))
+
+    expect(note).not.toBeInTheDocument
+})

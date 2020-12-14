@@ -22,12 +22,12 @@ function Tracker() {
   const[expenses, setExpenses] = useState(EXPENSE)
 
   const handleName = event => {
-    console.log('Name ', event.target.value)
+    console.log('Name: ', event.target.value)
     setName(event.target.value)
   }
 
   const handleAmount = event => {
-    console.log('Amount ', event.target.value)
+    console.log('Amount: ', event.target.value)
     setAmount(event.target.value)
     setKey(Date.now())
   }
@@ -40,6 +40,7 @@ function Tracker() {
       setExpenses([...expenses, expense])
       setName('')
       setAmount('')
+          console.log(expense)
     } else {
       alert('Invalid expense or amount')
     }

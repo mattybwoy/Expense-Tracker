@@ -31,6 +31,7 @@ const Form = ({name, amount, handleName, handleAmount, handleSubmitForm, handleC
       </Label>
       <Col sm={4}>
         <Input
+          role='spinbutton'
           type='number'
           name='amount'
           id='expenseAmount'

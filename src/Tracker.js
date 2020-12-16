@@ -28,7 +28,7 @@ function Tracker() {
 
   const handleSubmitForm = event => {
     event.preventDefault();
-
+    
     if (name!== '' && amount > 0) {
       amount = parseFloat(amount).toFixed(2);
       const expense = { name, amount, key }

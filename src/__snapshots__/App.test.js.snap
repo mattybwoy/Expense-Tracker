@@ -83,6 +83,7 @@ exports[`renders correctly when there are no expenses 1`] = `
             name="amount"
             onChange={[Function]}
             placeholder="0.00"
+            role="spinbutton"
             type="number"
             value=""
           />

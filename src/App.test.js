@@ -15,8 +15,10 @@ test('Allows expense to be deleted', () => {
 
     const textBox = screen.getByRole('textbox');
     userEvent.type(textBox, 'Book')
-    const numberBox = screen.getByRole('spinbutton');
-    userEvent.click(numberBox, 5)
+    //console.log(textBox)
+    userEvent.click(screen.getByRole('spinbutton'), 5)
+    //console.log(numberBox)
+
     userEvent.click(screen.getByText('Add'))
     const note = screen.getByDisplayValue('Book');
     userEvent.click(screen.getByRole('Delete'))

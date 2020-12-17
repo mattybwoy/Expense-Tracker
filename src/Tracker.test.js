@@ -17,9 +17,9 @@ test('Adds an expense', () => {
     const textBox = screen.getByRole('textbox');
     userEvent.type(textBox, 'Coffee')
     const numberBox = screen.getByRole('spinbutton');
-    userEvent.click(numberBox, 2)
+    userEvent.type(numberBox, '2')
     userEvent.click(screen.getByText('Add'))
-    const note = screen.getByDisplayValue('Coffee');
+    const note = screen.getByText('Coffee - £2.00');
 
     expect(note).toBeInTheDocument();
 })
@@ -29,7 +29,7 @@ test('Reset all expenses', () => {
     const textBox = screen.getByRole('textbox');
     userEvent.type(textBox, 'Coffee')
     const numberBox = screen.getByRole('spinbutton');
-    userEvent.click(numberBox, 2)
+    userEvent.type(numberBox, '2')
     userEvent.click(screen.getByText('Add'))
     userEvent.click(screen.getByText('Reset'))
 

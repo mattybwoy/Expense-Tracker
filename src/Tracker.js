@@ -21,13 +21,11 @@ function Tracker() {
 
   const handleAmount = event => {
     console.log('Amount: ', event.target.value)
-    
     setAmount(event.target.value);
     setKey(Date.now())
   }
 
   const handleSubmitForm = event => {
-    console.log("submit has been clicked")
     event.preventDefault();
     console.log(name)
     console.log(amount)
@@ -37,7 +35,6 @@ function Tracker() {
       setExpenses([...expenses, expense])
       setName('')
       setAmount('')
-          console.log(expense)
     } else {
       alert('Invalid expense or amount')
     }

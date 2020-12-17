@@ -15,13 +15,12 @@ test('Allows expense to be deleted', () => {
 
     const textBox = screen.getByRole('textbox');
     userEvent.type(textBox, 'Book')
-    //console.log(textBox)
-    userEvent.click(screen.getByRole('spinbutton'), 5)
-    //console.log(numberBox)
-
+    
+    const number = screen.getByRole('spinbutton')
+    userEvent.type(number, '5')
     userEvent.click(screen.getByText('Add'))
-    const note = screen.getByDisplayValue('Book');
-    userEvent.click(screen.getByRole('Delete'))
+    const note = screen.getByText('Book - £5.00');
+    userEvent.click(screen.getByText('Delete'))
 
     expect(note).not.toBeInTheDocument
 })

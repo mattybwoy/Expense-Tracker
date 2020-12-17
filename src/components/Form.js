@@ -26,7 +26,7 @@ const Form = ({name, amount, handleName, handleAmount, handleSubmitForm, handleC
       </Col>
     </FormGroup>
     <FormGroup className='row'>
-      <Label for='exampleEmail' sm={4}>
+      <Label for='expenseAmount' sm={4}>
        Amount £
       </Label>
       <Col sm={4}>

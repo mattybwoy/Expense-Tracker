@@ -27,8 +27,10 @@ function Tracker() {
   }
 
   const handleSubmitForm = event => {
+    console.log("submit has been clicked")
     event.preventDefault();
-    
+    console.log(name)
+    console.log(amount)
     if (name!== '' && amount > 0) {
       amount = parseFloat(amount).toFixed(2);
       const expense = { name, amount, key }

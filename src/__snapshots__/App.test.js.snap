@@ -70,7 +70,7 @@ exports[`renders correctly when there are no expenses 1`] = `
       >
         <label
           className="col-sm-4 col-form-label"
-          htmlFor="exampleEmail"
+          htmlFor="expenseAmount"
         >
           Amount £
         </label>

@@ -5,19 +5,23 @@ import userEvent from '@testing-library/user-event'
 //import renderer from 'react-test-renderer';
 //import App from '../App';
 import List from '../components/List'
+import { Button, ListGroup, ListGroupItem } from 'reactstrap'
 
 
-xtest('Allows expense to be deleted', () => {
-  render(<List/>)
-  const expenses = [{name: "Book", amount: "5", key: 1607957294201}]
+test('Allows expense to be deleted', () => {
+    const expenses = [{name: "Book", amount: "5", key: 1607957294201}]
+  render(<div>
+    <ListGroup>
+      {expenses && expenses.map(expense => (
+        <ListGroupItem style={{backgroundColor: "muted", margin: 3 }}key={expense.key}>
+          {expense.name} - £{expense.amount}
+            <Button variant="contained" style={{float: 'right'}} 
+            className="float-right" 
+            onClick={() => handleDelete(expense.key)}>Delete</Button >
+        </ListGroupItem>
+      ))}
+    </ListGroup>
+  </div>)
 
-    const textBox = screen.getByRole('textbox');
-    userEvent.type(textBox, 'Book')
-    const numberBox = screen.getByRole('spinbutton');
-    userEvent.click(numberBox, 5)
-    userEvent.click(screen.getByText('Add'))
-    const note = screen.getByDisplayValue('Book');
-    userEvent.click(screen.getByText('Delete'))
-
-    expect(note).not.toBeInTheDocument
+    expect(screen.getByText('Delete')).toBeInTheDocument
 })

@@ -24,7 +24,8 @@ test('Adds an expense', () => {
     expect(note).toBeInTheDocument();
 })
 
-test('Reset all expenses', () => {
+
+test('Reset all expenses', async () => {
     render(<Tracker />)
     const textBox = screen.getByRole('textbox');
     userEvent.type(textBox, 'Coffee')

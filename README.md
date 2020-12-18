@@ -19,7 +19,7 @@ To create an expenses tracker using React, incorporating react hooks, localstora
 
 
 ## Testing (Jest)
-- 6 pass
+- 8 pass
 
 ## Collaborators
 mattybwoy

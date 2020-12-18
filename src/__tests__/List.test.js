@@ -5,6 +5,7 @@ import { Button, ListGroup, ListGroupItem } from 'reactstrap'
 
 
 test('Delete button renders for each expense', () => {
+  
 const expenses = [{name: "Book", amount: "5", key: 1607957294201}]
 
   render(<div>

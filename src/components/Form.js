@@ -11,7 +11,7 @@ Button,
 const Form = ({name, amount, handleName, handleAmount, handleSubmitForm, handleClearExpenses}) => (
   <BTForm style={{ margin: 10, textAlign: "center" }}>
       <FormGroup className='row'>
-      <Label for='exampleEmail' sm={4}>
+      <Label for='expenseLabel' sm={4}>
         Name of Expense
       </Label>
       <Col sm={4}>

@@ -1,7 +1,7 @@
 import React from 'react';
 import '@testing-library/jest-dom'
 import { render,screen } from '@testing-library/react'
-import Tracker from './Tracker'
+import Tracker from '../Tracker'
 
 
 test('Displays title of app Expenses Tracker React App', () => {

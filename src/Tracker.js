@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { Jumbotron } from 'reactstrap'
 import logo from './logo.svg'
-import './Tracker.css';
+import '../src/styles/Tracker.css';
 import Form from './components/Form'
 import List from './components/List'
 import { Container } from 'reactstrap'

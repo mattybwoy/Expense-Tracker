@@ -1,4 +1,4 @@
-import './Form.css'
+import '../styles/Form.css'
 import React from 'react'
 import { Form as BTForm,
 FormGroup,

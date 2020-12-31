@@ -1,3 +1,12 @@
+<p align="center">
+  <a href="https://reactjs.org/">
+    <img alt="React" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1200px-React-icon.svg.png" width="60" />
+  </a>
+</p>
+<h1 align="center">
+  Expense Tracker
+</h1>
+
 ## Objective
 To create an expenses tracker using React, incorporating react hooks, localstorage. 
 ## Progress 
@@ -15,9 +24,19 @@ To create an expenses tracker using React, incorporating react hooks, localstora
 - Animation
 - Editing existing expenses
 
+## Installation
+- Git clone repository
+- Type into terminal ```npm install```
+- Type into terminal ```yarn start```
 
 ## Testing (Jest)
 - 9 pass
+
+## Screenshots
+![shot1](./public/shot1.png)
+Default screen
+![shot2](./public/shot2.png)
+After adding an expense
 
 ## Collaborators
 mattybwoy

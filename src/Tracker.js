@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from 'react'
-import { Jumbotron } from 'reactstrap'
+import { Jumbotron, Container } from 'reactstrap'
 import logo from './logo.svg'
 import '../src/styles/Tracker.css';
 import Form from './components/Form'
 import List from './components/List'
-import { Container } from 'reactstrap'
 
 const EXPENSE = localStorage.getItem('expenses') ? JSON.parse(localStorage.getItem('expenses')) : []
 
@@ -15,22 +14,18 @@ function Tracker() {
   const[expenses, setExpenses] = useState(EXPENSE)
 
   const handleName = event => {
-    console.log('Name: ', event.target.value)
     setName(event.target.value)
   }
 
   const handleAmount = event => {
-    console.log('Amount: ', event.target.value)
-    setAmount(event.target.value);
+    setAmount(event.target.value)
     setKey(Date.now())
   }
 
   const handleSubmitForm = event => {
     event.preventDefault();
-    console.log(name)
-    console.log(amount)
     if (name!== '' && amount > 0) {
-      amount = parseFloat(amount).toFixed(2);
+      amount = parseFloat(amount).toFixed(2)
       const expense = { name, amount, key }
       setExpenses([...expenses, expense])
       setName('')
@@ -48,8 +43,8 @@ function Tracker() {
   const handleDelete = key => {
     const filteredExpense = expenses.filter(expense => expense.key!==key);
     setExpenses(
-   filteredExpense
-  )
+      filteredExpense
+    )
   }
 
   useEffect(() => {
@@ -60,7 +55,9 @@ return (
   <Container>
     <Jumbotron style = {{backgroundColor: "#bdbdbd "}}>
       <h2 className = 'text-center'>
+        💸
         Expenses Tracker
+        💸
       <br></br>
       </h2>
       <div className= 'text-center'>
@@ -73,7 +70,6 @@ return (
             }, 0)}
           </span>
         </p>
- 
       </div>
         <Form name = {name} amount = {amount} handleName = {handleName} handleAmount = {handleAmount} handleSubmitForm = {handleSubmitForm} handleClearExpenses = {handleClearExpenses}/>
         <List expenses={expenses} handleDelete={handleDelete}/>

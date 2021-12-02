@@ -46,7 +46,6 @@ const Form = ({name, amount, handleName, handleAmount, handleSubmitForm, handleC
     </Button>{' '}
     <Button type='submit' color ='danger' onClick={handleClearExpenses}>Reset</Button>
   </BTForm>
-
 )
 
 export default Form

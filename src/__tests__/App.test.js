@@ -5,6 +5,7 @@ import renderer from 'react-test-renderer';
 import userEvent from '@testing-library/user-event'
 
 
+
 test('renders correctly when there are no expenses', () => {
   const tree = renderer.create(<App /> ).toJSON();
   expect(tree).toMatchSnapshot();

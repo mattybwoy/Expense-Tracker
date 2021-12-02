@@ -15,7 +15,7 @@ exports[`renders correctly when there are no expenses 1`] = `
     <h2
       className="text-center"
     >
-      Expenses Tracker
+      💸 Expenses Tracker 💸
       <br />
     </h2>
     <div

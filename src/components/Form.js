@@ -44,7 +44,7 @@ const Form = ({name, amount, handleName, handleAmount, handleSubmitForm, handleC
     <Button className = 'add' type='submit' color='primary' onClick={handleSubmitForm}>
       Add
     </Button>{' '}
-    <Button type='submit' color ='danger' onClick={handleClearExpenses}>Reset</Button>
+    <Button className='submit' color ='danger' onClick={handleClearExpenses}>Reset</Button>
   </BTForm>
 )
 

@@ -1,17 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Castoro&family=Electrolize&family=Noto+Serif+JP:wght@700&display=swap');
 
-.body {
-  background-color: rgba(128, 128, 128, 0.089);
-}
-
-.row {
-  font-family: 'Castoro', serif;
-}
-
-.add {
-  font-family: 'Castoro', serif;
-}
-
-.submit {
+.list {
   font-family: 'Castoro', serif;
 }
